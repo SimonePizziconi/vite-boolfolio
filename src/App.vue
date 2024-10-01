@@ -10,11 +10,15 @@ import Header from './components/Header.vue'
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <Header/>
+    <router-view></router-view>
   </div>
 </template>
 
 <style lang="scss" scoped>
-
+.container{
+  width: 70%;
+  margin: 0 auto;
+}
 </style>
