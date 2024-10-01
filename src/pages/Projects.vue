@@ -1,17 +1,25 @@
 <script>
 import axios from 'axios';
+import { store } from '@/store/store';
+import Loading from '@/components/partials/Loading.vue';
+
 
     export default {
         name: 'Projects',
+        components: {
+            Loading
+        },
         data() {
             return {
-                projects: []
+                projects: [],
+                isLoading: true
             }
         },
         methods: {
             getApi() {
-                axios.get('http://127.0.0.1:8000/api/progetti')
+                axios.get( store.apiUrl + 'progetti')
                     .then(result => {
+                        this.isLoading = false;
                         this.projects = result.data.results;
                     })
                     .catch(error => {
@@ -27,7 +35,10 @@ import axios from 'axios';
 
 <template>
     <h1>Progetti</h1>
-    <div class="container-flex">
+    <div v-if="isLoading" class="loading">
+        <Loading/>
+    </div>
+    <div v-else class="container-flex">
         <div class="card" v-for="project in projects" :key="project.id">
             <h1>Titolo: {{ project.title }}</h1>
             <div class="img-container">
@@ -42,6 +53,19 @@ import axios from 'axios';
 </template>
 
 <style lang="scss" scoped>
+    .loading{
+        position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f0f0f0; /* Puoi scegliere il colore di sfondo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Fa sì che stia sopra tutto */
+    }
+
     .container-flex{
         width: 100%;
         display: flex;       
