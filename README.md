@@ -10,9 +10,6 @@
 - **CSS/SCSS**: Per la gestione dello stile e la responsività.
 - **API Laravel** (opzionale): Se stai utilizzando un backend Laravel per il fetching dei dati.
 
-## Screenshot
-![Screenshot del progetto](link-immagine)
-
 ## Installazione
 Segui questi passaggi per installare e avviare il progetto localmente:
 
