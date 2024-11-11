@@ -1,29 +1,35 @@
-# vite-boolfolio
+# Vite Boolfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+## Descrizione
+**Vite Boolfolio** è un'applicazione web sviluppata con **Vite** e **Vue.js** che permette di creare e visualizzare un portfolio di progetti. Il progetto è pensato per essere una piattaforma dinamica, semplice da usare e ottimizzata per le performance grazie alla tecnologia di Vite.
 
-## Recommended IDE Setup
+## Tecnologie utilizzate
+- **Vite**: Per il bundling e il setup del progetto.
+- **Vue.js**: Framework JavaScript per la costruzione dell'interfaccia utente.
+- **Axios**: Per le richieste HTTP al backend.
+- **CSS/SCSS**: Per la gestione dello stile e la responsività.
+- **API Laravel** (opzionale): Se stai utilizzando un backend Laravel per il fetching dei dati.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Screenshot
+![Screenshot del progetto](link-immagine)
 
-## Customize configuration
+## Installazione
+Segui questi passaggi per installare e avviare il progetto localmente:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Prerequisiti
+- Node.js (>= 16.x)
+- NPM o Yarn
 
-## Project Setup
+### Setup
+```bash
+# Clona il repository
+git clone https://github.com/SimonePizziconi/vite-boolfolio.git
 
-```sh
+# Naviga nella cartella del progetto
+cd vite-boolfolio
+
+# Installa le dipendenze
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Avvia il server di sviluppo
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
